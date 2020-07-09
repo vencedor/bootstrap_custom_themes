@@ -6,6 +6,12 @@
 /*
  * 	Default theme - Owl Carousel CSS File
  */
+.owl-theme .owl-prev{
+  position:absolute;left:-2.2rem;top:50%;
+}
+.owl-theme .owl-next{
+  position:absolute;left:2.2rem;top:50%;
+}
 .owl-theme .owl-nav {
   margin-top: 10px;
   text-align: center;

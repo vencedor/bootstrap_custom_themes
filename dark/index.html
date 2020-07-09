@@ -57,28 +57,28 @@
             <li class="list-inline-item"><a href="info@mikmagazin.com">
               <img src="vendors/custom-icons/mail.svg" style="filter: invert(1);height:1rem" alt="" title="Mail us"></a>
             </li>
-          </ul>
-      </div>
-      <div class="float-left list-inline-item">
-          <ul class="list-inline">
             <li class="list-inline-item"><a href="0887 92 66 55">
-                <img src="vendors/bootstrap-icons/telephone-fill.svg" style="filter: invert(1);height:1rem" alt="" title="Mail us">
-                &nbsp;<span style="color:rgba(255,255,255,1)">0887 92 66
-                  55</span></a></li>
-            <li class="list-inline-item"><a href="index.php?route=account/login"><span
-                  style="color:rgba(255,255,255,1)">вход</span></a></li>
-            <li class="list-inline-item"><a href="index.php?route=account/register"><span
-                  style="color:rgba(255,255,255,1)">регистрация</span></a></li>
-            <li class="list-inline-item"><a href="za-sporten-magazin-more-i-koloezdene-page4.html"><span
-                  style="color:rgba(245,196,21,1)">за нас</span></a></li>
-            <li class="list-inline-item"><a href="index.php?route=information/contact"><span
-                  style="color:rgba(245,196,21,1)">контакти</span></a></li>
+              <img src="vendors/bootstrap-icons/telephone-fill.svg" style="filter: invert(1);height:1rem" alt="" title="Mail us">
+              &nbsp;<span style="color:rgba(255,255,255,1)">0887 92 66
+                55</span></a></li>
+          <li class="list-inline-item"><a href="index.php?route=account/login"><span
+                style="color:rgba(255,255,255,1)">вход</span></a></li>
+          <li class="list-inline-item"><a href="index.php?route=account/register"><span
+                style="color:rgba(255,255,255,1)">регистрация</span></a></li>
+          <li class="list-inline-item"><a href="za-sporten-magazin-more-i-koloezdene-page4.html"><span
+                style="color:rgba(245,196,21,1)">за нас</span></a></li>
+          <li class="list-inline-item"><a href="index.php?route=information/contact"><span
+                style="color:rgba(245,196,21,1)">контакти</span></a></li>
           </ul>
       </div>
-      <div class="float-right list-inline-item">
+      <div class="float-right list-inline-item col-xs-12">
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary btn-sm my-2 my-sm-0" type="submit">Search</button>
+          <div class="input-group">
+            <input class="form-control form-control-sm mr-sm-2" type="text" placeholder="Search">
+            <div class="input-group-apend">
+              <button class="btn btn-secondary btn-sm my-sm-0" type="submit">Search</button>
+            </div>
+          </div>
         </form>         
       </div>
     </div>
@@ -143,7 +143,41 @@
             </div>
           </li>
         </ul>
-
+      </div>
+      <div class="dropdown dropleft quick-cart">
+        <button class="btn btn-primary dropdown-toggle " type="button" id="dropdownMenuCartButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="vendors/bootstrap-icons/cart4.svg" style="filter: invert(1);height:1.5rem" alt="" title="Facebook"><span class="caret"></span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuCartButton">
+          <ul class="list-group col-12 ml-2">
+            <li class="row mx-0 py-1 bg-white mb-2">
+              <a class="col-10 " href="#"> 
+                <img class="thumb" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"> 
+                <span class="ml-2">Action</span>
+                <span class="float-right price">19<sup>32</sup>лв.</span>
+              </a>
+              <div class="col-2 text-right">
+                <a class="btn btn-sm btn-secondary rounded pull-right" style="opacity:.5" href="#del">
+                  <img src="vendors/bootstrap-icons/trash.svg" style="filter: invert(1);height:1rem" alt="delete">
+                </a>
+              </div>
+            </li>
+            <li class="row mx-0 py-1 mb-2 bg-white">
+              <a class="col-10" href="#"> 
+                <img class="thumb" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg"> 
+                <span class="ml-2">Action</span>
+              </a>
+              <div class="col-2 text-right">
+                <a class="btn btn-sm btn-secondary rounded pull-right" style="opacity:.5" href="#del">
+                  <img src="vendors/bootstrap-icons/trash.svg" style="filter: invert(1);height:1rem" alt="delete">
+                </a>
+              </div>
+            </li>
+            <li class="list-unstyled">
+              <a href="#" class="btn btn-success col-12">Поръчай</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -259,6 +293,7 @@
           $('.owl-carousel').owlCarousel({
             loop:true
             ,nav:true
+            ,navText : ["<img src='vendors/bootstrap-icons/arrow-left-circle.svg' style='filter: invert(1);height:2rem' />","<img src='vendors/bootstrap-icons/arrow-right-circle.svg' style='filter: invert(1);height:2rem' />"]
             ,lazyLoadEager:2
             ,autoplay:true
             ,autoplayHoverPause:true
@@ -266,6 +301,7 @@
             ,animateIn:true
             ,stagePadding:70
             ,margin:8
+            ,dots:false
             ,responsive:{
               0 : {
                 items:1
@@ -274,7 +310,7 @@
                 items:2
               },
               768 : {
-                items:4
+                items:2
               }
             }
           });
@@ -284,7 +320,7 @@
   <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.theme.default.min.css">
 
-  <div class="owl-carousel card-product-list" style="clear:both;width:100%;background:green;">
+  <div class="owl-carousel owl-theme card-product-list clearfix">
     <figure class="card card-product-grid card-lg position-relative"> 
       <a href="#" class="img-wrap" data-abc="true">
         <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1571750967/Ecommerce/ef192a21ec96.jpg">
@@ -356,6 +392,100 @@
   </div>
 
   <!-- slider end -->
+
+
+
+
+  <!-- cart view -->
+  <div class="container">
+    <div class="card shopping-cart">
+             <div class="card-header bg-dark text-light">
+                 Shipping cart
+                 <a href="" class="btn btn-outline-info btn-sm float-right">Continue shopping</a>
+                 <div class="clearfix"></div>
+             </div>
+             <div class="card-body">
+                     <!-- PRODUCT -->
+                     <div class="row">
+                         <div class="col-12 col-sm-12 col-md-2 text-left">
+                            <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
+                         </div>
+                         <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                             <h4 class="product-name"><strong>Product Name</strong></h4>
+                             <h4>
+                                 <small>Product description</small>
+                             </h4>
+                         </div>
+                         <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                             <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                 <h6><strong>25<sup>00</sup>лв. <span class="text-muted">x</span></strong></h6>
+                             </div>
+                             <div class="col-4 col-sm-4 col-md-4">
+                                 <div class="quantity form-group">
+                                     <input type="number" step="1" max="999" min="1" value="1" title="Qty" class="form-control qty"
+                                            size="4">
+                                 </div>
+                             </div>
+                             <div class="col-2 col-sm-2 col-md-2 text-right pr-0">
+                                 <button type="button" class="btn btn-outline-danger bg-white rounded">
+                                  <img src="vendors/bootstrap-icons/trash.svg" style="filter: invert(16%) sepia(100%) saturate(3833%) hue-rotate(14deg) brightness(93%) contrast(94%);height:1rem" alt="" title="trash">
+                                 </button>
+                             </div>
+                         </div>
+                     </div>
+                     <hr>
+                     <!-- END PRODUCT -->
+                     <!-- PRODUCT -->
+                     <div class="row">
+                      <div class="col-12 col-sm-12 col-md-2 text-left">
+                        <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
+                      </div>
+                      <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                          <h4 class="product-name"><strong>Product Name</strong></h4>
+                          <h4>
+                              <small>Product description</small>
+                          </h4>
+                      </div>
+                      <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                          <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                              <h6><strong>25<sup>00</sup>лв. <span class="text-muted">x</span></strong></h6>
+                          </div>
+                          <div class="col-4 col-sm-4 col-md-4">
+                              <div class="quantity form-group">
+                                  <input type="number" step="1" max="999" min="1" value="1" title="Qty" class="form-control qty"
+                                         size="4">
+                              </div>
+                          </div>
+                          <div class="col-2 col-sm-2 col-md-2 text-right pr-0">
+                              <button type="button" class="btn btn-outline-danger bg-white rounded">
+                               <img src="vendors/bootstrap-icons/trash.svg" style="filter: invert(16%) sepia(100%) saturate(3833%) hue-rotate(14deg) brightness(93%) contrast(94%);height:1rem" alt="" title="trash">
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+                  <!-- END PRODUCT -->
+             </div>
+             <div class="card-footer">
+                 <div class="float-right" style="margin: 10px">
+                     <a href="" class="btn btn-success btn-lg float-right">Checkout</a>
+                     <div class="float-right" style="margin: 5px">
+                         Total price: <b>50.00€</b>
+                     </div>
+                 </div>
+             </div>
+         </div>
+ </div>
+  <!-- cart view END -->
+
+
+
+
+
+
+
+
+  
 
 
     <div class="page-header" id="banner">
@@ -479,7 +609,26 @@
       </div>
     </div>
 
+  </div>
+    <!-- Light section 
+      ================================================== -->
+    <div class="bs-docs-section bg-light bg-white text-dark">
+        <div class="container page-header">
+          <h1 id="typography">Typography</h1>
+        </div>
+        <div class="container bs-component pb-4">
+          <h2>Example body text</h2>
+          <p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+          <p><small>This line of text is meant to be treated as fine print.</small></p>
+          <p>The following is <strong>rendered as bold text</strong>.</p>
+          <p>The following is <em>rendered as italicized text</em>.</p>
+          <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+        <button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button></div>
+    </div>
 
+    <!-- Light section END -->
+  <div class="container">
     <!-- Buttons
       ================================================== -->
     <div class="bs-docs-section">
@@ -1886,7 +2035,7 @@
       <div class="col-lg-12">
 
         <ul class="list-unstyled">
-          <li class="float-lg-right"><a href="#top">Back to top</a></li>
+          <li class="float-lg-right"><a href="#top" class="backtotop">Back to top</a></li>
           <li><a href="https://blog.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a>
           </li>
           <li><a href="https://blog.bootswatch.com/rss/">RSS</a></li>
@@ -1914,7 +2063,7 @@
     <script src="vendors/js/custom.js"></script>
     <script>
     docReady(function() {
-        $("a").on('click', function(event) {
+        $("a").on('click','.backtotop', function(event) {
           if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;

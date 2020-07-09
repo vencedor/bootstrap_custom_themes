@@ -6,6 +6,11 @@ html {
 pre {
     background: #f7f7f9
 }
+.quick-cart .thumb{
+    width:3rem;
+    max-height:3rem;
+}
+.btn{border-radius: 0.2rem;}
 
 @media (min-width: 992px) {
     .dropdown:hover>.dropdown-menu {
@@ -29,6 +34,13 @@ pre {
 }
 .navbar-dark .navbar-nav .nav-link:hover{
     background:rgba(255,255,255,.1);
+}
+
+img{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
 }
 
 #home,
